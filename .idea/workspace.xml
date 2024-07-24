@@ -55,13 +55,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Lesson_4.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Lesson_4.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/89149/IdeaProjects/Aston_AQA"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <method v="2">
@@ -145,7 +147,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="cca83577-f055-48d2-a61a-97c4abd82c12" name="Changes" comment="" />
+      <changelist id="cddb10c1-c1a4-411e-b83b-127c4e20ddcf" name="Changes" comment="обновление" />
       <created>1721471878129</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -183,13 +185,46 @@
       <option name="project" value="LOCAL" />
       <updated>1721485135149</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="обновление">
+      <option name="closed" value="true" />
+      <created>1721841733426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1721841733426</updated>
+    </task>
+    <task id="LOCAL-00006" summary="обновление">
+      <option name="closed" value="true" />
+      <created>1721841869423</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1721841869423</updated>
+    </task>
+    <task id="LOCAL-00007" summary="обновление">
+      <option name="closed" value="true" />
+      <created>1721842092400</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1721842092400</updated>
+    </task>
+    <task id="LOCAL-00008" summary="обновление">
+      <option name="closed" value="true" />
+      <created>1721842105550</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1721842105550</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="задача 1" />
     <MESSAGE value="ДЗ к уроку 4" />
-    <option name="LAST_COMMIT_MESSAGE" value="ДЗ к уроку 4" />
+    <MESSAGE value="обновление" />
+    <option name="LAST_COMMIT_MESSAGE" value="обновление" />
   </component>
 </project>
