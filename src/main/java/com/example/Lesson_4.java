@@ -24,9 +24,7 @@ public class Lesson_4 {
         modifyArray();
         fillDiagonal();
         createAndPrintArray(10, 5);
-
     }
-
 
     //Метод 1
     public static void printThreeWords() {
@@ -74,7 +72,6 @@ public class Lesson_4 {
     public static boolean isSumInRange(int a, int b) {
         int sum = a + b;
         return sum >= 10 && sum <= 20;
-
     }
 
     // Метод 6
@@ -133,7 +130,6 @@ public class Lesson_4 {
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
-
         System.out.println();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
@@ -143,7 +139,6 @@ public class Lesson_4 {
     // Метод 12
     public static void modifyArray() {
         int[] array = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-
         for (int i = 0; i < array.length; i++) {
             if (array[i] < 6) {
                 array[i] *= 2;
@@ -161,11 +156,9 @@ public class Lesson_4 {
     public static void fillDiagonal() {
         int n = 5;
         int[][] array = new int[n][n];
-
         for (int i = 0; i < n; i++) {
             array[i][i] = 1;
         }
-
         System.out.println();
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < n; j++) {
@@ -181,12 +174,10 @@ public class Lesson_4 {
         for (int i = 0; i < len; i++) {
             array[i] = initialValue;
         }
-
         System.out.println();
         for (int i = 0; i < array.length; i++) {
             System.out.print(array[i] + " ");
         }
         System.out.println();
     }
-
 }
