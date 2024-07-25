@@ -26,6 +26,14 @@ public class Lesson_4 {
         createAndPrintArray(10, 5);
     }
 
+    // Метод для вывода одномерного массива
+    public static void printArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + " ");
+        }
+        System.out.println();
+    }
+
     //Метод 1
     public static void printThreeWords() {
         System.out.println("Orange");
@@ -70,8 +78,7 @@ public class Lesson_4 {
 
     // Метод 5
     public static boolean isSumInRange(int a, int b) {
-        int sum = a + b;
-        return sum >= 10 && sum <= 20;
+        return a + b >= 10 && a + b <= 20;
     }
 
     // Метод 6
@@ -85,11 +92,7 @@ public class Lesson_4 {
 
     // Метод 7
     public static boolean isNegative(int number) {
-        if (number < 0) {
-            return true;
-        } else {
-            return false;
-        }
+            return (number < 0);
     }
 
     // Метод 8
@@ -101,15 +104,7 @@ public class Lesson_4 {
 
     // Метод 9
     public static boolean isLeapYear(int year) {
-        if (year % 400 == 0) {
-            return true;
-        } else if (year % 100 == 0) {
-            return false;
-        } else if (year % 4 == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return (year % 400 == 0) || ((year % 100 != 0) && (year % 4 == 0));
     }
 
     // Метод 10
@@ -117,11 +112,11 @@ public class Lesson_4 {
         for (int i = 0; i < array.length; i++) {
             if (array[i] == 0) {
                 array[i] = 1;
-            } else if (array[i] == 1) {
+            } else {
                 array[i] = 0;
             }
         }
-        System.out.println(Arrays.toString(array));
+        printArray(array);;
     }
 
     // Метод 11
@@ -130,10 +125,7 @@ public class Lesson_4 {
         for (int i = 0; i < array.length; i++) {
             array[i] = i + 1;
         }
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
+        printArray(array);
     }
 
     // Метод 12
@@ -146,10 +138,7 @@ public class Lesson_4 {
         }
 
         System.out.println("Измененный массив: ");
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
+        printArray(array);
     }
 
     // Метод 13
@@ -174,10 +163,6 @@ public class Lesson_4 {
         for (int i = 0; i < len; i++) {
             array[i] = initialValue;
         }
-        System.out.println();
-        for (int i = 0; i < array.length; i++) {
-            System.out.print(array[i] + " ");
-        }
-        System.out.println();
+        printArray(array);
     }
 }
