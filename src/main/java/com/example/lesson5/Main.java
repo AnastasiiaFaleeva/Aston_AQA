@@ -24,19 +24,25 @@ public class Main {
                     ", Возраст: " + employee.getAge());
         }
 
-        Park.Attraction[] attractions = new Park.Attraction[3];
-        attractions[0] = new Park.Attraction("Ролердром", "10:00 - 20:00",
-                1000);
-        attractions[1] = new Park.Attraction("Батуты", "09:00 - 18:00",
-                500);
-        attractions[2] = new Park.Attraction("Колесо обозрения", "11:00 - 22:00",
-                800);
+        Park.Attraction[] attractionsPark1 = new Park.Attraction[3];
+        attractionsPark1[0] = new Park.Attraction("Ролердром", "10:00 - 20:00", 1000);
+        attractionsPark1[1] = new Park.Attraction("Батуты", "09:00 - 18:00", 500);
+        attractionsPark1[2] = new Park.Attraction("Колесо обозрения", "11:00 - 22:00", 800);
 
-        System.out.println("Информация об аттракционах:");
-        for (Park.Attraction attraction : attractions) {
-            System.out.println("Название: " + attraction.getName() +
-                    ", Время работы: " + attraction.getWorkingHours() +
-                    ", Стоимость: " + attraction.getPrice());
-        }
+        Park.Attraction[] attractionsPark2 = new Park.Attraction[3];
+        attractionsPark2[0] = new Park.Attraction("Ролердром", "09:00 - 21:00", 1500);
+        attractionsPark2[1] = new Park.Attraction("Батуты", "10:00 - 19:00", 600);
+        attractionsPark2[2] = new Park.Attraction("Колесо обозрения", "10:00 - 20:00", 900);
+
+        Park park1 = new Park("Парк 1", attractionsPark1);
+        Park park2 = new Park("Парк 2", attractionsPark2);
+
+        System.out.println("Информация о парках:");
+        park1.printParkInfo();
+        park2.printParkInfo();
+
     }
 }
+
+
+

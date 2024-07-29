@@ -4,15 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddb10c1-c1a4-411e-b83b-127c4e20ddcf" name="Changes" comment="обновление">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Park.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_07_2024_19_53__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_07_2024_19_53__Changes_.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_07_2024_19_54__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_24_07_2024_19_54__Changes_.xml" afterDir="false" />
+    <list default="true" id="cddb10c1-c1a4-411e-b83b-127c4e20ddcf" name="Changes" comment="ДЗ лекция5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Park.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +69,7 @@
     "Maven.Aston_AQA [clean].executor": "Run",
     "Maven.Aston_AQA [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "lesson5",
+    "git-widget-placeholder": "#2 on lesson5",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/89149/.jdks/corretto-17.0.12",
@@ -256,7 +251,23 @@
       <option name="project" value="LOCAL" />
       <updated>1721842105550</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="ДЗ лекция5">
+      <option name="closed" value="true" />
+      <created>1722249804715</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1722249804715</updated>
+    </task>
+    <task id="LOCAL-00010" summary="ДЗ лекция5">
+      <option name="closed" value="true" />
+      <created>1722249812325</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1722249812325</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -264,6 +275,7 @@
     <MESSAGE value="задача 1" />
     <MESSAGE value="ДЗ к уроку 4" />
     <MESSAGE value="обновление" />
-    <option name="LAST_COMMIT_MESSAGE" value="обновление" />
+    <MESSAGE value="ДЗ лекция5" />
+    <option name="LAST_COMMIT_MESSAGE" value="ДЗ лекция5" />
   </component>
 </project>

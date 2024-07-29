@@ -4,8 +4,10 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
+@AllArgsConstructor
 public class Park {
-    private Attraction attraction;
+    private String name;
+    private Attraction[] attractions;
 
     @Data
     @AllArgsConstructor
@@ -15,7 +17,18 @@ public class Park {
         private int price;
 
         public void printAttractionInfo() {
-            System.out.println(this);
+            System.out.println("Название: " + name +
+                    ", Время работы: " + workingHours +
+                    ", Стоимость: " + price);
+        }
+    }
+
+    public void printParkInfo() {
+        System.out.println("Название парка: " + name);
+        for (Attraction attraction : attractions) {
+            attraction.printAttractionInfo();
         }
     }
 }
+
+
