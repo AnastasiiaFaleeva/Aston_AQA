@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cddb10c1-c1a4-411e-b83b-127c4e20ddcf" name="Changes" comment="ДЗ лекция5">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Park.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/lesson5/Park.java" afterDir="false" />
-    </list>
+    <list default="true" id="cddb10c1-c1a4-411e-b83b-127c4e20ddcf" name="Changes" comment="ДЗ лекция5" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +65,7 @@
     "Maven.Aston_AQA [clean].executor": "Run",
     "Maven.Aston_AQA [install].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#2 on lesson5",
+    "git-widget-placeholder": "lesson5",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/89149/.jdks/corretto-17.0.12",
@@ -277,5 +273,16 @@
     <MESSAGE value="обновление" />
     <MESSAGE value="ДЗ лекция5" />
     <option name="LAST_COMMIT_MESSAGE" value="ДЗ лекция5" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/lesson5/Main.java</url>
+          <line>27</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
