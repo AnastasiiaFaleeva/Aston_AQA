@@ -1,4 +1,7 @@
-package com.example.lesson4;
+package com.example;
+import java.util.Scanner;
+import java.util.Arrays;
+import java.util.Arrays;
 
 
 public class Lesson_4 {
