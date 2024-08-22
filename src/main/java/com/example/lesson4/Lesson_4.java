@@ -1,9 +1,3 @@
-package com.example;
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.Arrays;
-
-
 public class Lesson_4 {
 
     public static void main(String[] args) {
