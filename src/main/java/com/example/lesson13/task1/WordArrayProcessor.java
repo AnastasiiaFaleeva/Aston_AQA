@@ -2,16 +2,27 @@ package com.example.lesson13.task1;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-
 import java.util.*;
 
 @Getter
 @RequiredArgsConstructor
+
 public class WordArrayProcessor {
     private final String[] words;
 
-    public Set<String> getUniqueWords() {
-        return new HashSet<>(Arrays.asList(words));
+    public List<String> getUniqueWords() {
+        Map<String, Integer> wordCount = new HashMap<>();
+        for (String word : words) {
+            wordCount.put(word, wordCount.getOrDefault(word, 0) + 1);
+        }
+
+        List<String> uniqueWords = new ArrayList<>();
+        for (Map.Entry<String, Integer> entry : wordCount.entrySet()) {
+            if (entry.getValue() == 1) {
+                uniqueWords.add(entry.getKey());
+            }
+        }
+        return uniqueWords;
     }
 
     public Map<String, Integer> getWordCount() {

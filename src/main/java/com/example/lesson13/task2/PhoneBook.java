@@ -20,4 +20,13 @@ public class PhoneBook {
     public List<String> get(String surname) {
         return phoneBook.getOrDefault(surname, new ArrayList<>());
     }
+
+    public boolean containsPhoneNumber(String phoneNumber) {
+        for (List<String> phones : phoneBook.values()) {
+            if (phones.contains(phoneNumber)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }
