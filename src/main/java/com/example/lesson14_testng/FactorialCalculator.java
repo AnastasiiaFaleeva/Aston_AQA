@@ -4,7 +4,7 @@ public class FactorialCalculator {
 
     public long calculateFactorial(int number) {
         if (number < 0) {
-            throw new IllegalArgumentException("Нельзя вычислить факториал отрицательного числа");
+            throw new IllegalArgumentException("Нельзя вычислить факториал отрицательного числ");
         }
         long result = 1;
         for (int i = 2; i <= number; i++) {

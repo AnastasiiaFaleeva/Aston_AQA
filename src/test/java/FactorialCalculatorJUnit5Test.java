@@ -8,7 +8,7 @@ public class FactorialCalculatorJUnit5Test {
     private final FactorialCalculator calculator = new FactorialCalculator();
 
     @Test
-    @DisplayName("Факториал 0 равен 1")
+    @DisplayName("Факториал 0 равен 1 ")
     void testCalculateFactorialOfZero() {
         assertEquals(1, calculator.calculateFactorial(0));
     }

@@ -7,7 +7,7 @@ public class FactorialCalculatorTest {
     private final FactorialCalculator calculator = new FactorialCalculator();
 
     @Test
-    public void testFactorialOfZero() {
+    public void testFactorialOfZero()  {
         assertEquals(calculator.calculateFactorial(0), 1);
     }
 
