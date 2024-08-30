@@ -32,8 +32,13 @@ public class FactorialCalculatorJUnit5Test {
     }
 
     @Test
-    @DisplayName("Негативный тест")
-    void testCalculateFactorialIsFalse() {
-        assertEquals(5000, calculator.calculateFactorial(7));
+    @DisplayName("Проверка, что факториал 7 равен 5040")
+    void testFactorialTrueOrFalse() {
+        long result = calculator.calculateFactorial(7);
+        if (result == 5040) {
+            assertTrue(true, "Метод правильно вычислил факториал 7 как 5040");
+        } else {
+            fail("Метод вернул неверный результат для факториала 7");
+        }
     }
 }
