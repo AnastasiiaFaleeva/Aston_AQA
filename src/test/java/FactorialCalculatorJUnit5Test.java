@@ -30,4 +30,10 @@ public class FactorialCalculatorJUnit5Test {
     void testCalculateFactorialOfNegativeNumber() {
         assertThrows(IllegalArgumentException.class, () -> calculator.calculateFactorial(-1));
     }
+
+    @Test
+    @DisplayName("Негативный тест")
+    void testCalculateFactorialIsFalse() {
+        assertEquals(5000, calculator.calculateFactorial(7));
+    }
 }

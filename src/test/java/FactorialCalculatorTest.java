@@ -25,4 +25,9 @@ public class FactorialCalculatorTest {
     public void testFactorialOfNegativeNumber() {
         calculator.calculateFactorial(-1);
     }
+
+    @Test
+    public void testFactorialIsFalse() {
+        assertEquals(calculator.calculateFactorial(7), 5000);
+    }
 }
