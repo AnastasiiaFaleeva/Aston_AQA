@@ -16,6 +16,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class MtsTests {
     private WebDriver driver;
+    private WebDriverWait wait;
 
     @BeforeEach
     public void setUp() {
@@ -23,8 +24,7 @@ public class MtsTests {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.get("https://www.mts.by/");
-        WebDriverWait wait = new WebDriverWait(driver, 10);
-
+        wait = new WebDriverWait(driver, 10);
         WebElement acceptCookiesButton = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("cookie-agree")));
         if (acceptCookiesButton != null && acceptCookiesButton.isDisplayed()) {
             acceptCookiesButton.click();
@@ -39,55 +39,53 @@ public class MtsTests {
     }
 
     @Test
-    @DisplayName("Проверка наличия заголовка блока 'Онлайн пополнение без комиссии'")
+    @DisplayName("Наличие заголовка блока 'Онлайн пополнение без комиссии'")
     public void testCheckBlockTitle() {
-        WebElement blockTitle = driver.findElement(By.xpath(
-                "//div[@class='pay__wrapper']//h2[contains(text(), " +
-                        "'Онлайн пополнение') and contains(., 'без комиссии')]"));
-        assertNotNull(blockTitle, "Заголовок блока не найден");
+        WebElement blockTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//div[@class='pay__wrapper']//h2[contains(text(), 'Онлайн пополнение') and " +
+                        "contains(., 'без комиссии')]")));
+        assertTrue(blockTitle.isDisplayed(), "Заголовок блока не найден или не отображается");
     }
 
     @Test
     @DisplayName("Проверка наличия логотипов платежных систем")
     public void testCheckPaymentLogos() {
-        WebElement paymentLogos = driver.findElement(By.xpath("//div[contains(@class, 'pay__partners')]/ul"));
-        assertNotNull(paymentLogos, "Блок с логотипами платежных систем не найден");
+        WebElement paymentLogos = wait.until(ExpectedConditions.visibilityOfElementLocated(
+                By.xpath("//div[contains(@class, 'pay__partners')]/ul")));
 
         String[] expectedAlts = {"Visa", "Verified By Visa", "MasterCard", "MasterCard Secure Code", "Белкарт"};
         for (String altText : expectedAlts) {
             WebElement logo = paymentLogos.findElement(By.xpath(".//img[@alt='" + altText + "']"));
-            assertNotNull(logo, "Логотип с alt-текстом '" + altText + "' не найден");
+            assertTrue(logo.isDisplayed(), "Логотип с alt-текстом '" + altText +
+                    "' не найден или не отображается");
         }
     }
 
     @Test
     @DisplayName("Проверка работы ссылки 'Подробнее о сервисе'")
     public void testCheckMoreInfoLik() {
-        WebElement moreInfoLink = driver.findElement(By.linkText("Подробнее о сервисе"));
-        assertNotNull(moreInfoLink, "Ссылка 'Подробнее о сервисе' не найдена");
+        WebElement moreInfoLink = wait.until(ExpectedConditions.elementToBeClickable(By.linkText("Подробнее о сервисе")));
         moreInfoLink.click();
         assertTrue(driver.getCurrentUrl().contains(
                         "https://www.mts.by/help/poryadok-oplaty-i-bezopasnost-internet-platezhey/"),
-                "Переход по ссылке 'Подробнее о сервисе' не выполнен");
+                "Переход по ссылке 'Подробнее о сервисе' не привел к ожидаемому URL");
     }
 
     @Test
     @DisplayName("Проверка кнопки 'Продолжить' при оплате")
-    public void testCheckContinueButto() {
-        WebElement phoneInput = driver.findElement(By.id("connection-phone"));
-        assertNotNull(phoneInput, "Поле для ввода номера телефона не найдено");
+    public void testCheckContinueButton() {
+        WebElement phoneInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("connection-phone")));
         phoneInput.clear();
         phoneInput.sendKeys("297777777");
-
-        WebElement sumInput = driver.findElement(By.id("connection-sum"));
-        assertNotNull(sumInput, "Поле для ввода суммы не найдено");
+        WebElement sumInput = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("connection-sum")));
         sumInput.clear();
         sumInput.sendKeys("300");
-
-        WebElement continueButton = driver.findElement(By.xpath(
-                "//button[@type='submit' and contains(@class, 'button__default')" +
-                        " and text()='Продолжить']"));
-        assertNotNull(continueButton, "Кнопка 'Продолжить' не найдена");
+        WebElement continueButton = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(
+                "//button[@type='submit' and contains(@class, 'button__default') " +
+                        "and text()='Продолжить']")));
         continueButton.click();
+        WebElement modalWindow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
+                "//div[contains(@class, 'payment-page__container')]")));
+        assertTrue(modalWindow.isDisplayed(), "Модальное окно не отображается.");
     }
 }
