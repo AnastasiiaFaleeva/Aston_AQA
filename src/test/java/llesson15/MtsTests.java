@@ -84,8 +84,10 @@ public class MtsTests {
                 "//button[@type='submit' and contains(@class, 'button__default') " +
                         "and text()='Продолжить']")));
         continueButton.click();
+
+        driver.switchTo().frame(0);
         WebElement modalWindow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
-                "//div[contains(@class, 'payment-page__container')]")));
+                "//div[contains(@class, 'app-wrapper__content')]")));
         assertTrue(modalWindow.isDisplayed(), "Модальное окно не отображается.");
     }
 }
