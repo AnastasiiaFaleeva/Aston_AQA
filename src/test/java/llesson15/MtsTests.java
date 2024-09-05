@@ -84,7 +84,7 @@ public class MtsTests {
                 "//button[@type='submit' and contains(@class, 'button__default') " +
                         "and text()='Продолжить']")));
 
-        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(1));
+        wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(0));
         driver.switchTo().frame(0);
         WebElement modalWindow = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(
                 "//div[contains(@class, 'app-wrapper__content')]")));
