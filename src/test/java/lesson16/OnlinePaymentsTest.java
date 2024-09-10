@@ -44,7 +44,7 @@ public class OnlinePaymentsTest {
         };
     }
 
-    @Test(description = "Проверка заполнения полей для различных типов оплаты", dataProvider = "paymentData")
+    @Test(description = "Проверка заполнения полей для различных типов оплаты", dataProvider = "paymentData", priority = 1)
     public void paymentTypeTest(String type, String specText, String sum, String email) {
         PaymentSectionDto paymentSectionDto = PaymentSectionDto.builder()
                 .paymentType(type)
@@ -57,28 +57,33 @@ public class OnlinePaymentsTest {
         steps.fillPaymentSection(paymentSectionDto);
     }
 
-    @Test(description = "Проверка корректности данных в модальном окне после нажатия на кнопку 'Продолжить'")
+    @Test(description = "Проверка корректности данных в модальном окне после нажатия на кнопку 'Продолжить'", priority = 2)
     public void paymentModalTest() {
         PaymentSectionDto paymentSectionDto = PaymentSectionDto.builder()
                 .paymentType("Услуги связи")
                 .specialText("297777777")
-                .sum("300")
+                .sum("50")
                 .email("connection@mail.ru")
                 .build();
+
+        steps.clickDropdownButton();
         steps.fillPaymentSection(paymentSectionDto);
         steps.submitPayment();
+        WebElement frame = driver.findElement(By.xpath("//iframe[@class='bepaid-iframe']"));
+        driver.switchTo().frame(frame);
 
         assertTrue(steps.isModalDisplayed(), "Модальное окно не отображается.");
-        assertEquals(steps.getSumOnButton(), "300", "Сумма на кнопке некорректна.");
-        assertEquals(steps.getPhoneNumber(), "297777777", "Номер телефона некорректен.");
+        assertEquals(steps.getSumOnButton(), "Оплатить 50.00 BYN", "Сумма на кнопке некорректна.");
+        assertEquals(steps.getPhoneNumber(), "Оплата: Услуги связи Номер:375297777777",
+                "Номер телефона некорректен.");
 
-        String[] expectedCardPlaceholders = {"Номер карты", "Срок действия", "CVV"};
-        assertTrue(steps.verifyCardPlaceholders(expectedCardPlaceholders), "Placeholder'ы " +
-                "для полей карты некорректны.");
+        String[] expectedCardPlaceholders = {"Номер карты", "CVC"};
+        assertTrue(steps.verifyCardPlaceholders(expectedCardPlaceholders),
+                "Placeholder'ы для полей карты некорректны.");
 
-        String[] expectedPaymentIcons = {"Visa", "MasterCard", "Белкарт"};
-        assertTrue(steps.verifyPaymentIcons(expectedPaymentIcons), "Иконки платёжных систем " +
-                "некорректны или отсутствуют.");
+        String[] expectedPaymentIcons = {"Visa", "MasterCard", "Белкарт", "Мир"};
+        assertTrue(steps.verifyPaymentIcons(expectedPaymentIcons),
+                "Иконки платёжных систем некорректны или отсутствуют.");
     }
 
     @AfterClass
