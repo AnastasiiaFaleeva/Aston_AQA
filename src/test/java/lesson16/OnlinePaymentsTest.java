@@ -90,7 +90,7 @@ public class OnlinePaymentsTest {
     @AfterMethod
     @Step("Обновление страницы после теста")
     public void refreshPage() {
-        driver.navigate().refresh();  // Перезагрузка страницы перед каждым тестом
+        driver.navigate().refresh();
     }
 
     @AfterClass
